@@ -1,5 +1,5 @@
 import { useApp } from '@/contexts/AppContext';
-import { ArrowLeft, Globe, ExternalLink, Map, Layers, Mountain, Droplets, GraduationCap, Building2 } from 'lucide-react';
+import { ArrowLeft, Globe, ExternalLink, Map, Layers, Droplets, Building2 } from 'lucide-react';
 
 const gisTools = [
   {
@@ -125,3 +125,4 @@ export default function GISMapView() {
     </div>
   );
 }
+

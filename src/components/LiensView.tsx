@@ -5,7 +5,7 @@ import {
   liensByType,
 } from '@/data/maricopaRealEstateData';
 import type {
-  LienRecord,
+
   LienType,
   LienStatus,
   LiensByType,
@@ -295,7 +295,7 @@ export default function LiensView() {
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
             {filteredRecords.filter((r) => r.property?.lat && r.property?.lng).map((record) => (
-              <CircleMarker key={record.id} center={[record.property!.lat, record.property!.lng]} radius={8} fillColor={CHART_COLORS[record.type] || '#6b7280'} fillOpacity={0.8} stroke={true} color="#fff" weight={1}>
+              <CircleMarker key={record.id} center={[record.property!.lat ?? 0, record.property!.lng ?? 0]} radius={8} fillColor={CHART_COLORS[record.type] || '#6b7280'} fillOpacity={0.8} stroke={true} color="#fff" weight={1}>
                 <Popup>
                   <div className="text-xs">
                     <p className="font-bold">{record.propertyAddress}</p>
@@ -553,3 +553,4 @@ export default function LiensView() {
     </div>
   );
 }
+

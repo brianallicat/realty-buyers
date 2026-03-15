@@ -18,7 +18,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
-import { Building2, MapPin, Gavel, FileText, Home, Filter, Search, X, Layers } from 'lucide-react';
+import { Building2, MapPin, Filter, Search, X, Layers } from 'lucide-react';
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -285,3 +285,4 @@ export default function PropertyMapView() {
     </div>
   );
 }
+

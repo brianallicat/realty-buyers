@@ -5,9 +5,9 @@ import {
   luxurySales,
   totalLuxurySales,
   totalLuxuryVolume,
-  avgLuxuryPrice,
-  luxuryCashCount,
-  type RecentSale,
+
+
+
   type FinancingType,
   type HomeType,
 } from '@/data/maricopaRealEstateData';
@@ -456,7 +456,7 @@ export default function LuxurySalesView() {
           <ResponsiveContainer width="100%" height={260}>
             <PieChart>
               <Pie data={priceTierDist} cx="50%" cy="50%" outerRadius={90} innerRadius={45} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
-                {priceTierDist.map((entry, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
+                {priceTierDist.map((_entry, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
               <Tooltip contentStyle={{ backgroundColor: '#0d1f3c', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, color: '#fff' }} />
               <Legend wrapperStyle={{ fontSize: 12, color: '#9ca3af' }} />
@@ -467,3 +467,4 @@ export default function LuxurySalesView() {
     </div>
   );
 }
+

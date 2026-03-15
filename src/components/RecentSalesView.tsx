@@ -6,12 +6,12 @@ import {
   totalRecentSales,
   totalSalesVolume,
   avgSalePrice,
-  cashSalesCount,
-  type RecentSale,
+
+
   type FinancingType,
   type HomeType,
 } from '@/data/maricopaRealEstateData';
-import { ArrowLeft, DollarSign, TrendingUp, Home, Banknote, ChevronDown, ChevronUp, Search, SlidersHorizontal, MapPin } from 'lucide-react';
+import { ArrowLeft, DollarSign, Home, ChevronDown, ChevronUp, Search, SlidersHorizontal, MapPin } from 'lucide-react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
@@ -445,3 +445,4 @@ export default function RecentSalesView() {
     </div>
   );
 }
+

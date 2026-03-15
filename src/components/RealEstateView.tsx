@@ -25,7 +25,7 @@ import {
 } from 'recharts';
 import {
   Building2, Gavel, FileText, Home, MapPin,
-  TrendingUp, TrendingDown, AlertTriangle, Clock, ArrowRight, Users,
+  AlertTriangle, Clock, ArrowRight, Users,
 } from 'lucide-react';
 
 const CHART_COLORS = {
@@ -219,3 +219,4 @@ export default function RealEstateView() {
     </div>
   );
 }
+

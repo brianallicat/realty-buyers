@@ -8,10 +8,10 @@ import {
   avgUltraLuxuryPrice,
   ultraLuxuryAvgAcreage,
   ultraLuxuryAvgSqft,
-  type UltraLuxuryListing,
+
   type ListingStatus,
 } from '@/data/maricopaRealEstateData';
-import { ArrowLeft, Diamond, ChevronDown, ChevronUp, Search, MapPin, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Diamond, ChevronDown, ChevronUp, Search, MapPin } from 'lucide-react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
@@ -404,3 +404,4 @@ export default function UltraLuxuryListingsView() {
     </div>
   );
 }
+
