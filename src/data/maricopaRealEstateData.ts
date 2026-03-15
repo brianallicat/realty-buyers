@@ -61,7 +61,7 @@ export interface FSBOListing {
   propertyType: string; listingType: ListingType; status: PropertyStatus;
   daysOnMarket: number; agentRepresented: boolean; property?: { address: string; city: string; zip: string; county: string; lat?: number; lng?: number; };
 
-export const fsboListings: FSBOListing[] = [
+export const fsboListings: FSBOListing[] = [ 
   { id: "FSBO-001", address: "17246 W Ashley Dr", city: "Goodyear", zip: "85338", price: 385000, beds: 4, baths: 4, sqft: 2876, yearBuilt: 2018, propertyType: "Single Family", listingType: "fsbo", status: "active", daysOnMarket: 1, agentRepresented: false, property: { address: "17246 W Ashley Dr", city: "Goodyear", zip: "85338", county: "Maricopa", lat: 33.4350, lng: -112.3750 } },
   { id: "FSBO-002", address: "1713 W Calle Marita", city: "Phoenix", zip: "85085", price: 989900, beds: 4, baths: 3, sqft: 3374, yearBuilt: 2015, propertyType: "Single Family", listingType: "fsbo", status: "active", daysOnMarket: 8, agentRepresented: false, property: { address: "1713 W Calle Marita", city: "Phoenix", zip: "85085", county: "Maricopa", lat: 33.7100, lng: -112.1100 } },
   { id: "FSBO-003", address: "2926 W Northern Ave", city: "Phoenix", zip: "85051", price: 234900, beds: 5, baths: 3, sqft: 1044, yearBuilt: 1960, propertyType: "Single Family", listingType: "fsbo", status: "active", daysOnMarket: 3, agentRepresented: false, property: { address: "2926 W Northern Ave", city: "Phoenix", zip: "85051", county: "Maricopa", lat: 33.5450, lng: -112.1000 } },
