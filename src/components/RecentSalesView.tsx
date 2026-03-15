@@ -11,7 +11,7 @@ import {
   type FinancingType,
   type HomeType,
 } from '@/data/maricopaRealEstateData';
-import { ArrowLeft, DollarSign, Home, ChevronDown, ChevronUp, Search, SlidersHorizontal, MapPin } from 'lucide-react';
+import { ArrowLeft, DollarSign, ChevronDown, ChevronUp, Search, SlidersHorizontal, MapPin } from 'lucide-react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
@@ -433,7 +433,7 @@ export default function RecentSalesView() {
           <h3 className="text-sm font-semibold text-white mb-4">Financing Type Distribution</h3>
           <ResponsiveContainer width="100%" height={260}>
             <PieChart>
-              <Pie data={financingDist} cx="50%" cy="50%" outerRadius={90} innerRadius={45} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
+              <Pie data={financingDist} cx="50%" cy="50%" outerRadius={90} innerRadius={45} dataKey="value" label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}>
                 {financingDist.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
               <Tooltip contentStyle={{ backgroundColor: '#0d1f3c', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, color: '#fff' }} />
@@ -445,4 +445,5 @@ export default function RecentSalesView() {
     </div>
   );
 }
+
 

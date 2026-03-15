@@ -531,7 +531,7 @@ export default function LiensView() {
                 dataKey="value"
                 nameKey="name"
                 paddingAngle={3}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
               >
                 {statusDistribution.map((entry) => (
                   <Cell key={entry.name} fill={STATUS_PIE_COLORS[entry.name] || '#6b7280'} />
@@ -553,4 +553,5 @@ export default function LiensView() {
     </div>
   );
 }
+
 
