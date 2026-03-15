@@ -60,6 +60,7 @@ export interface FSBOListing {
   beds: number; baths: number; sqft: number; yearBuilt: number;
   propertyType: string; listingType: ListingType; status: PropertyStatus;
   daysOnMarket: number; agentRepresented: boolean; property?: { address: string; city: string; zip: string; county: string; lat?: number; lng?: number; };
+}
 
 export const fsboListings: FSBOListing[] = [ 
   { id: "FSBO-001", address: "17246 W Ashley Dr", city: "Goodyear", zip: "85338", price: 385000, beds: 4, baths: 4, sqft: 2876, yearBuilt: 2018, propertyType: "Single Family", listingType: "fsbo", status: "active", daysOnMarket: 1, agentRepresented: false, property: { address: "17246 W Ashley Dr", city: "Goodyear", zip: "85338", county: "Maricopa", lat: 33.4350, lng: -112.3750 } },
